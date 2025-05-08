@@ -17,6 +17,7 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
           <a href="#gallery" className="text-gray-700 hover:text-purple-700 font-medium">Галерея</a>
+          <a href="#upload" className="text-gray-700 hover:text-purple-700 font-medium">Добавить работы</a>
           <a href="#services" className="text-gray-700 hover:text-purple-700 font-medium">Услуги</a>
           <a href="#contact" className="text-gray-700 hover:text-purple-700 font-medium">Контакты</a>
           <Button className="bg-purple-600 hover:bg-purple-700">
@@ -44,6 +45,13 @@ const Header = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Галерея
+            </a>
+            <a 
+              href="#upload" 
+              className="text-gray-700 hover:text-purple-700 font-medium py-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Добавить работы
             </a>
             <a 
               href="#services" 

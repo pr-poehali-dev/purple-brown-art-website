@@ -8,44 +8,50 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 const artworks = [
   {
     id: 1,
-    title: "Городской пейзаж в дождь",
-    image: "https://images.unsplash.com/photo-1583119912267-cc97c911e416?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    category: "Пейзаж"
+    title: "Ангелы классицизма",
+    image: "https://cdn.poehali.dev/files/e45659f7-9e49-4c85-805c-6a119e1f4ef2.jpg",
+    category: "Классика",
+    description: "Репродукция классического произведения с ангелами. Техника масляной живописи на холсте."
   },
   {
     id: 2,
-    title: "Портрет молодой женщины",
-    image: "https://images.unsplash.com/photo-1582201942933-68ccff5518a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
-    category: "Портрет"
+    title: "Городской пейзаж в дождь",
+    image: "https://images.unsplash.com/photo-1583119912267-cc97c911e416?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    category: "Пейзаж",
+    description: "Городской пейзаж, выполненный в технике гиперреализма. Особое внимание уделено отражениям на мокром асфальте."
   },
   {
     id: 3,
-    title: "Натюрморт с фруктами",
-    image: "https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    category: "Натюрморт"
+    title: "Портрет молодой женщины",
+    image: "https://images.unsplash.com/photo-1582201942933-68ccff5518a3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+    category: "Портрет",
+    description: "Портрет молодой женщины, выполненный в смешанной технике. Акцент на глаза и эмоциональное состояние модели."
   },
   {
     id: 4,
-    title: "Роспись стены в спальне",
-    image: "https://images.unsplash.com/photo-1513161455079-7dc1de15ef3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1776&q=80",
-    category: "Роспись стен"
+    title: "Натюрморт с фруктами",
+    image: "https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    category: "Натюрморт",
+    description: "Классический натюрморт с фруктами. Исполнение масляными красками с особым вниманием к световым эффектам."
   },
   {
     id: 5,
-    title: "Закат над морем",
-    image: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
-    category: "Пейзаж"
+    title: "Роспись стены в спальне",
+    image: "https://images.unsplash.com/photo-1513161455079-7dc1de15ef3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1776&q=80",
+    category: "Роспись стен",
+    description: "Пример росписи стены в жилом помещении. Сочетание абстрактных мотивов с элементами природы."
   },
   {
     id: 6,
-    title: "Абстрактная композиция",
-    image: "https://images.unsplash.com/photo-1547891654-e66ed7ebb968?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    category: "Абстракция"
+    title: "Закат над морем",
+    image: "https://images.unsplash.com/photo-1518998053901-5348d3961a04?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80",
+    category: "Пейзаж",
+    description: "Морской пейзаж на закате. Особое внимание уделено цветовым переходам неба и отражениям в воде."
   },
 ];
 
 // Categories for filtering
-const categories = ["Все", "Пейзаж", "Портрет", "Натюрморт", "Роспись стен", "Абстракция"];
+const categories = ["Все", "Классика", "Пейзаж", "Портрет", "Натюрморт", "Роспись стен", "Абстракция"];
 
 const GallerySection = () => {
   const [selectedCategory, setSelectedCategory] = useState("Все");
@@ -81,9 +87,61 @@ const GallerySection = () => {
           ))}
         </div>
 
+        {/* Featured Artwork (First Item) */}
+        {filteredArtworks.length > 0 && (
+          <Dialog>
+            <DialogTrigger asChild>
+              <Card className="mb-8 overflow-hidden cursor-pointer hover:shadow-md transition-all group">
+                <CardContent className="p-0 relative">
+                  <div className="grid grid-cols-1 md:grid-cols-2">
+                    <img 
+                      src={filteredArtworks[0].image} 
+                      alt={filteredArtworks[0].title} 
+                      className="w-full h-96 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="flex flex-col justify-center p-8 bg-white">
+                      <div className="inline-block bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm mb-4">
+                        {filteredArtworks[0].category}
+                      </div>
+                      <h3 className="text-2xl font-playfair font-bold mb-4">{filteredArtworks[0].title}</h3>
+                      <p className="text-gray-600 mb-6">{filteredArtworks[0].description}</p>
+                      <Button className="self-start bg-purple-600 hover:bg-purple-700">
+                        Подробнее
+                      </Button>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </DialogTrigger>
+            <DialogContent className="max-w-3xl">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <img 
+                    src={filteredArtworks[0].image} 
+                    alt={filteredArtworks[0].title} 
+                    className="w-full h-full object-cover rounded-md"
+                  />
+                </div>
+                <div className="flex flex-col justify-between">
+                  <div>
+                    <h3 className="text-2xl font-playfair font-bold mb-2">{filteredArtworks[0].title}</h3>
+                    <p className="text-purple-600 mb-4">{filteredArtworks[0].category}</p>
+                    <p className="text-gray-600">
+                      {filteredArtworks[0].description}
+                    </p>
+                  </div>
+                  <Button className="mt-4 bg-purple-600 hover:bg-purple-700">
+                    Заказать похожую работу
+                  </Button>
+                </div>
+              </div>
+            </DialogContent>
+          </Dialog>
+        )}
+
         {/* Gallery grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredArtworks.map((artwork) => (
+          {filteredArtworks.slice(1).map((artwork) => (
             <Dialog key={artwork.id}>
               <DialogTrigger asChild>
                 <Card className="overflow-hidden cursor-pointer hover:shadow-md transition-all group">
@@ -116,8 +174,7 @@ const GallerySection = () => {
                       <h3 className="text-2xl font-playfair font-bold mb-2">{artwork.title}</h3>
                       <p className="text-purple-600 mb-4">{artwork.category}</p>
                       <p className="text-gray-600">
-                        Это произведение искусства демонстрирует непревзойденное мастерство художницы в передаче текстур, света и теней. 
-                        Каждая деталь тщательно проработана, создавая эффект присутствия и погружения в композицию.
+                        {artwork.description}
                       </p>
                     </div>
                     <Button className="mt-4 bg-purple-600 hover:bg-purple-700">

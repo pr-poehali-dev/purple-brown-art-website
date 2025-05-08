@@ -1,13 +1,12 @@
 
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import Icon from "@/components/ui/icon";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import GallerySection from "@/components/GallerySection";
 import ServicesSection from "@/components/ServicesSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import UploadAlbum from "@/components/UploadAlbum";
 
 const Index = () => {
   return (
@@ -16,6 +15,7 @@ const Index = () => {
       <main>
         <HeroSection />
         <GallerySection />
+        <UploadAlbum />
         <ServicesSection />
         <ContactSection />
       </main>

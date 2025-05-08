@@ -1,11 +1,15 @@
 
 import { defineConfig } from "tailwindcss";
-import { fontFamily } from "tailwindcss/defaultTheme";
-import typography from "@tailwindcss/typography";
+import typographyPlugin from "@tailwindcss/typography";
 
 export default defineConfig({
   darkMode: ["class"],
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
+  ],
   theme: {
     container: {
       center: true,
@@ -15,6 +19,9 @@ export default defineConfig({
       },
     },
     extend: {
+      fontFamily: {
+        'playfair': ['Playfair Display', 'serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -53,37 +60,30 @@ export default defineConfig({
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
           border: "hsl(var(--sidebar-border))",
+          primary: "hsl(var(--sidebar-primary))",
+          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
+          accent: "hsl(var(--sidebar-accent))",
+          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
           ring: "hsl(var(--sidebar-ring))",
-          primary: {
-            DEFAULT: "hsl(var(--sidebar-primary))",
-            foreground: "hsl(var(--sidebar-primary-foreground))",
-          },
-          accent: {
-            DEFAULT: "hsl(var(--sidebar-accent))",
-            foreground: "hsl(var(--sidebar-accent-foreground))",
-          },
         },
         purple: {
-          50: "#F6F3FF",
-          100: "#E5DEFF",
-          200: "#C4B5FF",
-          300: "#9b87f5",
-          400: "#8B5CF6",
-          500: "#7E69AB",
-          600: "#6E59A5",
-          700: "#5D4A8F",
-          800: "#403E43",
-          900: "#312E73",
+          '50': '#f9f7ff',
+          '100': '#f3efff',
+          '200': '#e9e2fe',
+          '300': '#d6c6fd',
+          '400': '#bca2fb',
+          '500': '#9b87f5',
+          '600': '#8670e4',
+          '700': '#7855d8',
+          '800': '#6E59A5',
+          '900': '#403E43',
+          '950': '#231c38',
         },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-      },
-      fontFamily: {
-        sans: ["Inter", ...fontFamily.sans],
-        playfair: ["'Playfair Display'", ...fontFamily.serif],
       },
       keyframes: {
         "accordion-down": {
@@ -101,5 +101,8 @@ export default defineConfig({
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), typography],
+  plugins: [
+    typographyPlugin,
+    require("tailwindcss-animate")
+  ],
 });
